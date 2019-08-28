@@ -53,7 +53,9 @@ app.post('/upload', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, '..', 'client', 'public', 'index.html'));
 // });
 
-const db = 'mongodb://localhost:27017/usarmy';
+// const db = 'mongodb://localhost:27017/usarmy';
+const db = 'mongodb://localhost:27017/testUsarmy';
+
 mongoose
   .connect(db, {
     useNewUrlParser: true,
@@ -69,3 +71,5 @@ const server = app.listen(PORT, () => {
   const host = server.address().address;
   console.log(`Server is running on host ${host}, port ${PORT}`);
 });
+
+module.exports = app;
