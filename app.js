@@ -54,7 +54,9 @@ app.post('/upload', (req, res) => {
 // });
 
 // const db = 'mongodb://localhost:27017/usarmy';
-const db = 'mongodb://localhost:27017/testUsarmy';
+// const db = 'mongodb://localhost:27017/testUsarmy';
+const db =
+  'mongodb+srv://guan:ABCabc123@@cluster0-sjda3.mongodb.net/test?retryWrites=true&w=majority';
 
 mongoose
   .connect(db, {
