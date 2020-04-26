@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/GuanYangCLU/Unit-test-for-US-army-backend.svg?branch=master)](https://travis-ci.org/GuanYangCLU/Unit-test-for-US-army-backend)
 
-[travis-ci official site](https://travis-ci.org/)
+[Travis Ci official site](https://travis-ci.org/)
 
 ### To run test, in root directory, run:
 
