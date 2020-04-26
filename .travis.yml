@@ -1,5 +1,23 @@
 language: node_js
 node_js:
   - '8'
+# distribution, basic images that virtual machine created for us
+dist: trusty # linux small version
 services:
   - mongodb
+  # - redis-server
+env:
+  - NODE_ENV=ci PORT=5000
+cache:
+  directories:
+    - node_modules
+    # - client/node_modules
+install:
+  - npm install
+  # - npm run build
+script:
+  # nohup: if shell is closed, dont kill anything this command create
+  # &: run command in a subshell in background
+  # - nohup npm run start &
+  # - sleep 3  
+  - npm run test

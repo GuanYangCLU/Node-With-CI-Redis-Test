@@ -5,7 +5,7 @@ const path = require('path');
 const users = require('./routes/users');
 // const multer = require('multer');
 const fileUpload = require('express-fileupload');
-
+const keys = require('./config/keys');
 const app = express();
 
 // Middleware
@@ -54,7 +54,8 @@ app.post('/upload', (req, res) => {
 // });
 
 // const db = 'mongodb://localhost:27017/usarmy';
-const db = 'mongodb://localhost:27017/testUsarmy';
+// const db = 'mongodb://localhost:27017/testUsarmy';
+const db = keys.mongoURI || 'mongodb://localhost:27017/usarmy';
 
 mongoose
   .connect(db, {
