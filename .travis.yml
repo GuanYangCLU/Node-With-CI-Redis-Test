@@ -5,7 +5,7 @@ node_js:
 dist: trusty # linux small version
 services:
   - mongodb
-  # - redis-server
+  - redis-server
 env:
   - NODE_ENV=ci PORT=5000
 cache:

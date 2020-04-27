@@ -109,7 +109,9 @@ const getUsers = async params => {
   //   flow.skip(params.page * params.pageSize);
   //   flow.limit(params.pageSize);
   // }
-  return await flow.catch(err => {
+  return await flow.cache({
+    key: superiorId // if in redis hash, there is a key as superiorId, just use cache to return
+  }).catch(err => {
     console.log(err);
     throw new Error('error getting users from db');
   });

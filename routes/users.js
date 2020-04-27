@@ -3,6 +3,7 @@ const router = express.Router();
 const UserModel = require('../models/user');
 const UserService = require('../services/user');
 const UserController = require('../controllers/user');
+const cleanCache = require("../middlewares/cleanCache");
 
 // searchText, sortType, pageSize or limit, pageNumber or page/offset
 // params : mongoose paginate
@@ -63,8 +64,10 @@ router.get('/loopsafe/:userId', async (req, res) => {
   }
 });
 
+// use cleanCache middleware to clean up Cache when creating, updating and deleting user 
+
 // Create user
-router.post('/', async (req, res) => {
+router.post('/', cleanCache, async (req, res) => {
   try {
     const user = await UserController.createNewUser(req.body);
     res.status(200).json({
@@ -77,7 +80,7 @@ router.post('/', async (req, res) => {
 });
 
 // Edit user
-router.put('/:userId', async (req, res) => {
+router.put('/:userId', cleanCache, async (req, res) => {
   try {
     const user = await UserController.updateUser(req.params.userId, req.body);
     res.status(200).json({
@@ -90,7 +93,7 @@ router.put('/:userId', async (req, res) => {
 });
 
 // Delete user
-router.delete('/:userId', async (req, res) => {
+router.delete('/:userId', cleanCache, async (req, res) => {
   try {
     const user = await UserController.deleteUser(req.params.userId);
     res.status(200).json({
