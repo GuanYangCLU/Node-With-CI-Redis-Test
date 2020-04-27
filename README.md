@@ -22,6 +22,7 @@ Tags:
 - [x] Unit test with Mocha
 - [ ] Integration test with puppeteer
 - [x] Continious Integration(CI/CD) with travis ci
+- [x] Multi branch work flow via pull requests
 
 ### To run test, in root directory, run:
 
