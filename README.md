@@ -23,6 +23,9 @@ Tags:
 - [ ] Integration test with puppeteer
 - [x] Continious Integration(CI/CD) with travis ci
 - [x] Multi branch work flow via pull requests
+- [ ] Eslint Config
+- [ ] Webpack Config
+- [ ] Babel Config
 
 ### To run test, in root directory, run:
 
@@ -51,6 +54,8 @@ Tags:
 ### To test redis is running, in terminal, run:
 
 `redis-cli ping`
+
+### Update
 
 - ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `Redis branch Add redis caching feature`
 - ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Archive Verion 0 with just CI and Unit test`
