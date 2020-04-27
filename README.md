@@ -1,14 +1,20 @@
-# Unit-test-for-US-army-backend
+# Node Advanced feature implementation example project
 
 [![Build Status](https://travis-ci.org/GuanYangCLU/Unit-test-for-US-army-backend.svg?branch=master)](https://travis-ci.org/GuanYangCLU/Unit-test-for-US-army-backend)
 
 [Travis Ci Official Site](https://travis-ci.org/)
+
+Tags:
+    - On-live: CI/CD, Unit test, Rest API, Mongo, Mongoose
+    - Comming Soon: Integration test, puppeteer, Redis cache server, Google People(auth)
+    - Maybe: Cypress, Enzyme(if include React)
 
 ### Features included:
 
 - [x] Serving HTTP requests
 - [x] Restful API for Enterprise Management web app
 - [x] Persistance over MongoDB & mongoose
+- [x] Seperate environment by prod, dev, and ci
 - [ ] Log in and auth via JWT
 - [ ] Auth with middleware such as Google People/Sign in
 - [ ] Caching over redis
@@ -32,3 +38,5 @@
 ### Add to your repo:
 
 `git remote add origin (Your git repo)`
+
+### In config/dev.js created by your self, set your config like prod and ci with your mongoURI
