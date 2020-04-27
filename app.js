@@ -6,6 +6,8 @@ const users = require('./routes/users');
 // const multer = require('multer');
 const fileUpload = require('express-fileupload');
 const keys = require('./config/keys');
+require("./services/cache");
+
 const app = express();
 
 // Middleware
